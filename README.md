@@ -2,14 +2,15 @@
 
 ![Screenshot](/images/screenshot.png)
 
-(*FIXME: In one or two paragraphs, describe what the extension does and why one would download it. *)
+Custom CiviCRM API 3.0 endpoints and actions for The Nonprofit Centers Network.
 
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 ## Requirements
 
 * PHP v7.0+
-* CiviCRM (*FIXME: Version number*)
+* CiviCRM (5.13)
+* CiviCRM APIv3
 
 ## Installation (Web UI)
 
@@ -31,7 +32,7 @@ Sysadmins and developers may clone the [Git](https://en.wikipedia.org/wiki/Git) 
 install it with the command-line tool [cv](https://github.com/civicrm/cv).
 
 ```bash
-git clone https://github.com/FIXME/com.krdconsulting.ncnciviapi.git
+git clone https://github.com/krd-consulting/com.krdconsulting.ncnciviapi.git
 cv en ncnciviapi
 ```
 
