@@ -1,7 +1,4 @@
 # com.krdconsulting.ncnciviapi
-
-![Screenshot](/images/screenshot.png)
-
 Custom CiviCRM API 3.0 endpoints and actions for The Nonprofit Centers Network.
 
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
@@ -37,6 +34,7 @@ cv en ncnciviapi
 ```
 
 ## Usage
+Text enclosed in [square brackets] are placeholders.
 
 ### Create or update (and associate external purchase to the contact)
 ```
