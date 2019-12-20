@@ -26,13 +26,14 @@ function _civicrm_api3_contact_findorcreate_spec(&$spec) {
  * @param array $params
  *
  * @return array
- *   API result descriptor
+ *   Array containing data of found or newly created contact.
  *
  * @see civicrm_api3_create_success
  *
  */
 function civicrm_api3_contact_findorcreate($params) {
  
+	// Find the contact using given $params.
 	$result = civicrm_api3('Contact', 'get', [
     'contact_type' => $params['contact_type'],
     'first_name' => $params['first_name'],
@@ -42,6 +43,7 @@ function civicrm_api3_contact_findorcreate($params) {
  	]);	
 
 
+	// No results? Create a new one using the given $params.
 	if($result['count'] == 0) {
 
 
