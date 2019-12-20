@@ -38,8 +38,7 @@ cv en ncnciviapi
 
 ## Usage
 
-(* FIXME: Where would a new user navigate to get started? What changes would they see? *)
-
-## Known Issues
-
-(* FIXME *)
+### Create or update (and associate external purchase to the contact)
+```
+ https://ncn-dev.hellokrd.net/sites/all/modules/civicrm/extern/rest.php?entity=Contact&action=findorcreate&api_key=`[given_api_key]`&key=`[site_key]`&json={"contact_type":"Individual","first_name":"`[Alfred]`","last_name":"`[Pennyworth]`", "email": "`[alfred@wayne.net]`", "api.Activity.create":{"source_contact_id":"$value.id","activity_type_id":"External Purchase","custom_22":"`[purchase_id]`","custom_23":"`[Price]`","custom_24":"`[Description here.]`"} }
+```
