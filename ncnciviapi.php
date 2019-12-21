@@ -3,6 +3,12 @@
 require_once 'ncnciviapi.civix.php';
 use CRM_Ncnciviapi_ExtensionUtil as E;
 
+function ncnciviapi_civicrm_alterAPIPermissions($entity, $action, &$params, &$permissions)
+{
+  $permissions['contact']['findorcreate'] = array('add contacts', 'view all contacts');
+  $permissions['activity']['create'] = array('view all contacts');
+}
+
 /**
  * Implements hook_civicrm_config().
  *
