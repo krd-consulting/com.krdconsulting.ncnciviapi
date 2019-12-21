@@ -1,6 +1,7 @@
 <?php
 use CRM_Ncnciviapi_ExtensionUtil as E;
 
+
 /**
  * Contact.FindOrCreate API specification (optional)
  * This is used for documentation and validation.
@@ -32,30 +33,19 @@ function _civicrm_api3_contact_findorcreate_spec(&$spec) {
  *
  */
 function civicrm_api3_contact_findorcreate($params) {
- 
-	// Find the contact using given $params.
-	$result = civicrm_api3('Contact', 'get', [
-    'contact_type' => $params['contact_type'],
-    'first_name' => $params['first_name'],
-    'last_name' => $params['last_name'],
-  	'email' => $params['email'],
-		'options' => ['limit' => 1]
- 	]);	
 
+	// Find contact using given $params.
+	$response = civicrm_api3_contact_get($params);
 
-	// No results? Create a new one using the given $params.
-	if($result['count'] == 0) {
+	// No results? Create the contact.
+	if(empty($response['values'])) 
+		$response = civicrm_api3_contact_create($params);
 
-
-		$result = civicrm_api3('Contact', 'create', [
-      'version'=> 3,
-			'contact_type' => $params['contact_type'],
-      'first_name' => $params['first_name'],
-      'last_name' => $params['last_name'],
-			'api.Email.create' => ['email' => $params['email']],
-		]);
-	
-	}
-
-	return civicrm_api3_create_success([], $params, 'Contact', 'findorcreate');
+	return [
+		'values' => [
+			$response['id'] => [
+				'id' => $response['id'],
+			]
+		]
+	];
 }
