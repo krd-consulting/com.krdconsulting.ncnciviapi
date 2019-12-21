@@ -57,6 +57,5 @@ function civicrm_api3_contact_findorcreate($params) {
 	
 	}
 
-	// Spec: civicrm_api3_create_success($values = 1, $params = [], $entity = NULL, $action = NULL)
-	return civicrm_api3_create_success($result['values'], $params, 'Contact', 'findorcreate');
+	return civicrm_api3_create_success([], $params, 'Contact', 'findorcreate');
 }
