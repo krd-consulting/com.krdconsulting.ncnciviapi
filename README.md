@@ -1,7 +1,6 @@
 # com.krdconsulting.ncnciviapi
 Custom CiviCRM API 3.0 endpoints and actions for The Nonprofit Centers Network.
 
-The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 ## Usage
 Text enclosed in [square brackets] are placeholders.
@@ -14,29 +13,5 @@ https://ncn-dev.hellokrd.net/sites/all/modules/civicrm/extern/rest.php?entity=Co
 ## Requirements
 
 * PHP v7.0+
-* CiviCRM (5.13)
-* CiviCRM APIv3
-
-## Installation (Web UI)
-
-This extension has not yet been published for installation via the web UI.
-
-## Installation (CLI, Zip)
-
-Sysadmins and developers may download the `.zip` file for this extension and
-install it with the command-line tool [cv](https://github.com/civicrm/cv).
-
-```bash
-cd <extension-dir>
-cv dl com.krdconsulting.ncnciviapi@https://github.com/FIXME/com.krdconsulting.ncnciviapi/archive/master.zip
-```
-
-## Installation (CLI, Git)
-
-Sysadmins and developers may clone the [Git](https://en.wikipedia.org/wiki/Git) repo for this extension and
-install it with the command-line tool [cv](https://github.com/civicrm/cv).
-
-```bash
-git clone https://github.com/krd-consulting/com.krdconsulting.ncnciviapi.git
-cv en ncnciviapi
-```
+* CiviCRM 5.13+
+* CiviCRM API v3
