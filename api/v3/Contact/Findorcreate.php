@@ -15,7 +15,6 @@ function _civicrm_api3_contact_findorcreate_spec(&$spec) {
   $spec['first_name']['api.required'] = 1;
   $spec['last_name']['api.required'] = 1;
   $spec['email']['api.required'] = 1;
-  $spec['activity']['api.required'] = 1;
 }
 
 /**
